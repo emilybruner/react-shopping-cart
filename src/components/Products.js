@@ -5,7 +5,7 @@ import Product from './Product';
 import ProductContext from '../contexts/ProductContext';
 
 const Products = () => {
-	const { products, addItem } = useContext(ProductContext);
+	const { products, addItem, removeItem } = useContext(ProductContext);
 	return (
 		<div className="products-container">
 			{products.map(product => (
@@ -13,6 +13,7 @@ const Products = () => {
 					key={product.id}
 					product={product}
 					addItem={addItem}
+					removeItem={removeItem}
 				/>
 			))}
 		</div>
